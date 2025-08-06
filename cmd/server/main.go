@@ -28,7 +28,7 @@ func main() {
 	router := gin.Default()
 	
 	// Cấu hình CORS từ environment
-	allowedOrigins := getEnv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000")
+	allowedOrigins := getEnv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000,https://fe-todolist-golang.vercel.app,*")
 	origins := strings.Split(allowedOrigins, ",")
 	
 	// Validate và filter origins để đảm bảo format đúng
